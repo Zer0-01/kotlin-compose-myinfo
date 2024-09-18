@@ -4,18 +4,22 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.kotlin_compose_myinfo.Screen
+import com.example.kotlin_compose_myinfo.ui.splash.viewModel.SplashViewModel
 
 @Composable
-fun SplashView(navController: NavController) {
+fun SplashView(
+    navController: NavController,
+    splashViewModel: SplashViewModel = viewModel()
+) {
     Scaffold { innerPadding ->
         Column(
             modifier = Modifier
@@ -25,12 +29,15 @@ fun SplashView(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             CircularProgressIndicator()
-            Button(
-                onClick = {
-                 navController.navigate(route = Screen.Home.route)
-                }
-            ) {
-                Text(text = "To Home")
+
+            LaunchedEffect(Unit) {
+                splashViewModel.startTimer(
+                    onTimeOut = {
+                        navController.navigate(Screen.Home.route) {
+                            popUpTo(Screen.Splash.route) { inclusive = true }
+                        }
+                    }
+                )
             }
         }
     }
