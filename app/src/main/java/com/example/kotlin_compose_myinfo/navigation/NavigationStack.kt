@@ -1,4 +1,4 @@
-package com.example.kotlin_compose_myinfo
+package com.example.kotlin_compose_myinfo.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
