@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">kotlin_compose_myinfo</string>
+
+    <string name="home_population">Population</string>
+    <string name="home_education">Education</string>
+    <string name="home_transportation">Transportation</string>
+    <string name="home_financial">Financial</string>
+    <string name="home_healthcare">Healthcare</string>
+    <string name="home_household">Household</string>
 </resources>

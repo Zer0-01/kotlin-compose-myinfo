@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.example.kotlin_compose_myinfo.Screen
+import com.example.kotlin_compose_myinfo.navigation.Screen
 import com.example.kotlin_compose_myinfo.ui.splash.viewModel.SplashViewModel
 
 @Composable
