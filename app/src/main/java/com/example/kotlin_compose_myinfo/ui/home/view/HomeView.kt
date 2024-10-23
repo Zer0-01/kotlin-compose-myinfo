@@ -1,6 +1,7 @@
 package com.example.kotlin_compose_myinfo.ui.home.view
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -20,6 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.kotlin_compose_myinfo.R
+import com.example.kotlin_compose_myinfo.navigation.Screen
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -40,6 +42,9 @@ fun HomeView(navController: NavController) {
             Card(
                 modifier = Modifier
                     .weight(1f)
+                    .clickable {
+                        navController.navigate(Screen.Population.route)
+                    }
             ) {
                 Column(
                     modifier = Modifier
