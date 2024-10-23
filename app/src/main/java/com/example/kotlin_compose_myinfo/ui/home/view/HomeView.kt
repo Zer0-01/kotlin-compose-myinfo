@@ -1,7 +1,6 @@
 package com.example.kotlin_compose_myinfo.ui.home.view
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -16,7 +15,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -36,11 +34,16 @@ fun HomeView(navController: NavController) {
                 .padding(innerPadding)
                 .padding(8.dp),
             maxItemsInEachRow = 2,
-            horizontalArrangement = Arrangement.SpaceAround
+            horizontalArrangement = Arrangement.spacedBy(20.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
-            Card {
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
                 Column(
                     modifier = Modifier
+                        .fillMaxSize()
                         .padding(30.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -57,9 +60,14 @@ fun HomeView(navController: NavController) {
                 }
             }
 
-            Card {
+
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
                 Column(
                     modifier = Modifier
+                        .fillMaxSize()
                         .padding(30.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -75,9 +83,13 @@ fun HomeView(navController: NavController) {
                     )
                 }
             }
-            Card {
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
                 Column(
                     modifier = Modifier
+                        .fillMaxSize()
                         .padding(30.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -94,21 +106,69 @@ fun HomeView(navController: NavController) {
                 }
             }
 
-            Card {
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
                 Column(
                     modifier = Modifier
+                        .fillMaxSize()
                         .padding(30.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
                         modifier = Modifier
                             .size(70.dp),
-                        painter = painterResource(R.drawable.icon_home_transportation),
+                        painter = painterResource(R.drawable.icon_home_healthcare),
                         contentDescription = null
                     )
                     Spacer(modifier = Modifier.padding(vertical = 4.dp))
                     Text(
-                        text = stringResource(R.string.home_transportation)
+                        text = stringResource(R.string.home_healthcare)
+                    )
+                }
+            }
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(30.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        modifier = Modifier
+                            .size(70.dp),
+                        painter = painterResource(R.drawable.icon_home_household),
+                        contentDescription = null
+                    )
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    Text(
+                        text = stringResource(R.string.home_household)
+                    )
+                }
+            }
+            Card(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(30.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        modifier = Modifier
+                            .size(70.dp),
+                        painter = painterResource(R.drawable.icon_home_financial),
+                        contentDescription = null
+                    )
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    Text(
+                        text = stringResource(R.string.home_financial)
                     )
                 }
             }
