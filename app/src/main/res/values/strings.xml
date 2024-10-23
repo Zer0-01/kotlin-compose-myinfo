@@ -7,4 +7,6 @@
     <string name="home_financial">Financial</string>
     <string name="home_healthcare">Healthcare</string>
     <string name="home_household">Household</string>
+
+    <string name="population_population">Population</string>
 </resources>
