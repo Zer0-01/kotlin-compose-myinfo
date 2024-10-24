@@ -9,4 +9,6 @@
     <string name="home_household">Household</string>
 
     <string name="population_population">Population</string>
+    <string name="population_population_table_malaysia">Population table (Malaysia)</string>
+    <string name="population_population_table_state">Population table (State)</string>
 </resources>
