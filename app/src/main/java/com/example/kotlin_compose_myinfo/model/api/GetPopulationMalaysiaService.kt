@@ -4,6 +4,6 @@ import com.example.kotlin_compose_myinfo.model.PopulationMalaysia
 import retrofit2.http.GET
 
 interface GetPopulationMalaysiaService {
-    @GET ("populationMalaysia")
+    @GET ("data-catalogue?id=population_malaysia&limit=3")
     suspend fun getPopulationMalaysia(): PopulationMalaysia
 }
