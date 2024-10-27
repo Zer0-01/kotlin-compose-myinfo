@@ -70,71 +70,82 @@ fun PopulationView() {
                         Text(
                             text = stringResource(R.string.population_population_table_malaysia)
                         )
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Text(text = "2024")
-                            Text(text = "12345678")
-                        }
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Text(text = "2024")
-                            Text(text = "12345678")
-                        }
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Text(text = "2024")
-                            Text(text = "12345678")
-                        }
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Text(text = "2024")
-                            Text(text = "12345678")
-                        }
-                    }
 
+                        populationMalaysia?.forEach { item ->
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Text(text = item.date)
+                                Text(text = item.population.toString())
+
+                            }
+
+//                        Row(
+//                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                        ) {
+//                            Text(text = "2024")
+//                            Text(text = "12345678")
+//                        }
+//                        Row(
+//                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                        ) {
+//                            Text(text = "2024")
+//                            Text(text = "12345678")
+//                        }
+//                        Row(
+//                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                        ) {
+//                            Text(text = "2024")
+//                            Text(text = "12345678")
+//                        }
+//                        Row(
+//                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                        ) {
+//                            Text(text = "2024")
+//                            Text(text = "12345678")
+//                        }
+                        }
+
+                    }
                 }
-            }
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-            ) {
-                Column(
-                    modifier = Modifier.padding(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
                 ) {
-                    Text(
-                        text = stringResource(R.string.population_population_table_state)
-                    )
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    Column(
+                        modifier = Modifier.padding(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        Text(text = "2024")
-                        Text(text = "12345678")
+                        Text(
+                            text = stringResource(R.string.population_population_table_state)
+                        )
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(text = "2024")
+                            Text(text = "12345678")
+                        }
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(text = "2024")
+                            Text(text = "12345678")
+                        }
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(text = "2024")
+                            Text(text = "12345678")
+                        }
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(text = "2024")
+                            Text(text = "12345678")
+                        }
                     }
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Text(text = "2024")
-                        Text(text = "12345678")
-                    }
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Text(text = "2024")
-                        Text(text = "12345678")
-                    }
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Text(text = "2024")
-                        Text(text = "12345678")
-                    }
-                }
 
+                }
             }
         }
     }
