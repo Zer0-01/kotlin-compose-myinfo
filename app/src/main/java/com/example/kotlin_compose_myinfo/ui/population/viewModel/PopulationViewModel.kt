@@ -16,11 +16,16 @@ class PopulationViewModel : ViewModel() {
     private val _populationMalaysia = MutableLiveData<PopulationMalaysia>()
     val populationMalaysia: LiveData<PopulationMalaysia> = _populationMalaysia
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLading: LiveData<Boolean> = _isLoading
+
     fun fetchPopulationMalaysia() {
         viewModelScope.launch {
             try {
+                _isLoading.value = true
                 val populationMalaysia = repository.getPopulationMalaysia()
                 _populationMalaysia.value = populationMalaysia
+                _isLoading.value = false
             } catch (e: Exception) {
                 Log.d("Repo", "fetchPopulationMalaysia exception ${e.message}")
             }
