@@ -15,4 +15,8 @@ object RetrofitInstance {
     val getPopulationMalaysiaService: GetPopulationMalaysiaService by lazy {
         retrofit.create(GetPopulationMalaysiaService::class.java)
     }
+
+    val getPetroleumPriceService: GetPetroleumPriceService by lazy {
+        retrofit.create(GetPetroleumPriceService::class.java)
+    }
 }

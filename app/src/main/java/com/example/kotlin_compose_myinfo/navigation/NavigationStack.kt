@@ -30,6 +30,9 @@ fun NavigationStack() {
         composable(route = Screen.Population.route) {
             PopulationView(navController = navController)
         }
+        composable(route = Screen.Transportation.route) {
+
+        }
     }
 
 }
