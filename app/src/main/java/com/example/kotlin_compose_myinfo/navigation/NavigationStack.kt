@@ -28,7 +28,7 @@ fun NavigationStack() {
             HomeView(navController = navController)
         }
         composable(route = Screen.Population.route) {
-            PopulationView()
+            PopulationView(navController = navController)
         }
     }
 
